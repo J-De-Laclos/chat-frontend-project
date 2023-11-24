@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import "../style/ChatRoom.css";
 
-const ChatRoom = () => {
+const ChatRoom = ({ username }) => {
   const { channelId } = useParams();
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-
+  const navigate = useNavigate();
   const fetchMessages = async () => {
     try {
+      //   console.log("channelId:", channelId);
+      //   console.log("username:", username);
+      //   console.log("newMessage:", newMessage);
       const response = await axios.get(
         `http://localhost:3000/message/${channelId}`
       );
@@ -26,7 +30,7 @@ const ChatRoom = () => {
     try {
       await axios.post("http://localhost:3000/message", {
         channelId,
-        sender: "User",
+        sender: username,
         content: newMessage,
       });
 
@@ -39,9 +43,19 @@ const ChatRoom = () => {
   };
 
   return (
-    <div>
-      <h1>Chat Room</h1>
-      <div>
+    <div className="chat-room-container">
+      <div className="chatroom-head">
+        <h1 className="chat-room-header">Chat Room</h1>
+        <button
+          onClick={() => {
+            navigate("/chatrooms");
+          }}
+        >
+          Back to RoomList
+        </button>
+      </div>
+
+      <div className="chat-messages-container">
         {messages.map((message) => (
           <div key={message._id}>
             <strong>{message.sender}:</strong> {message.content}
@@ -53,7 +67,9 @@ const ChatRoom = () => {
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
         />
-        <button onClick={handleSendMessage}>Send Message</button>
+        <button className="send-message-button" onClick={handleSendMessage}>
+          Send Message
+        </button>
       </div>
     </div>
   );

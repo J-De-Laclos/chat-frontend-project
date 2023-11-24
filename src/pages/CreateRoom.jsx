@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../style/CreateRoom.css";
 
 const CreateRoom = ({ token }) => {
   const [name, setName] = useState("");
@@ -19,9 +20,9 @@ const CreateRoom = ({ token }) => {
   };
 
   return (
-    <div>
+    <div className="create-room-container">
       <h1>Create a New Room</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="create-room-form" onSubmit={handleSubmit}>
         <label>
           Room Name:
           <input

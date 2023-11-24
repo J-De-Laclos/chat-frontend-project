@@ -1,0 +1,51 @@
+.chatrooms-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chatrooms-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.link-chatrooms-create {
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #2980b9;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.link-chatrooms-create:hover {
+  background-color: #3498db;
+}
+
+.link-chatrooms {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.link-chatrooms:hover {
+  background-color: #2980b9;
+}
+
+.chatrooms-section p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.chatrooms-section div {
+  margin-bottom: 20px;
+}

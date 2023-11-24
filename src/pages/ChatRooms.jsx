@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../style/ChatRooms.css";
 
 const ChatRooms = ({ token }) => {
   const [data, setData] = useState({});
@@ -10,7 +11,7 @@ const ChatRooms = ({ token }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:3000/channel");
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -23,15 +24,21 @@ const ChatRooms = ({ token }) => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <section>
+    <section className="chatrooms-section">
+      <div>
+        <Link className="link-chatrooms-create" to={"/create-room"}>
+          ➕ Create new Room
+        </Link>
+      </div>
       {data.map((room) => (
-        <Link key={room._id} to={`/chat/${room._id}`}>
+        <Link
+          className="link-chatrooms"
+          key={room._id}
+          to={`/chat/${room._id}`}
+        >
           <h2>{room.name}</h2>
         </Link>
       ))}
-      <div>
-        <Link to={"/create-room"}>Create new Room</Link>
-      </div>
     </section>
   );
 };

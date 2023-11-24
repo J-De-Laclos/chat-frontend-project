@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background-size: cover;
+  background: linear-gradient(to right, #f6f8fa, #d3e0ea, #b8cdd8);
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #2c3e50, #34495e, #2c3e50);
+  color: rgb(74, 204, 204);
+}

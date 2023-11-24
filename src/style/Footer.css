@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  margin-top: 30px;
+  color: #757575;
+  height: 5%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-top: #246d9d 2px solid;
+}
+
+.footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #246d9d;
+}

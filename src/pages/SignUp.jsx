@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import "../style/SignUp.css";
 const SignUp = ({ handleToken }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -19,7 +19,7 @@ const SignUp = ({ handleToken }) => {
         password,
       });
       //   console.log(response.data);
-      handleToken(response.data.token);
+      handleToken(response.data.token, response.data.account.username);
       navigate("/chatrooms");
     } catch (error) {
       console.log(error.response);
@@ -34,8 +34,8 @@ const SignUp = ({ handleToken }) => {
   };
 
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
+    <section className="section-signup">
+      <form className="form-signup" onSubmit={handleSubmit}>
         <h1>S'inscrire</h1>
         <input
           type="text"
@@ -64,7 +64,9 @@ const SignUp = ({ handleToken }) => {
         <input type="submit" value="S'inscrire" />
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </form>
-      <Link to="/">You have already an account? Click here</Link>
+      <Link className="link-signup" to="/">
+        You have already an account? Click here
+      </Link>
     </section>
   );
 };
