@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../style/ChatRooms.css";
 
-const ChatRooms = ({ token }) => {
+const ChatRooms = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
