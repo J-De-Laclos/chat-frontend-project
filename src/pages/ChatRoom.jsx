@@ -15,7 +15,7 @@ const ChatRoom = ({ username }) => {
       //   console.log("newMessage:", newMessage);
       const response = await axios.get(
         // `http://localhost:3000/message/${channelId}`
-        `http://site--backend-chatroom--f5vs5q45f4mj.code.run/message/${channelId}`
+        `https://site--backend-chatroom--f5vs5q45f4mj.code.run/message/${channelId}`
       );
       setMessages(response.data);
     } catch (error) {
@@ -31,7 +31,7 @@ const ChatRoom = ({ username }) => {
     try {
       // await axios.post("http://localhost:3000/message"
       await axios.post(
-        "http://site--backend-chatroom--f5vs5q45f4mj.code.run/message",
+        "https://site--backend-chatroom--f5vs5q45f4mj.code.run/message",
         {
           channelId,
           sender: username,

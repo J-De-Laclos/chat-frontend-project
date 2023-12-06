@@ -12,7 +12,7 @@ const ChatRooms = () => {
       try {
         // const response = await axios.get("http://localhost:3000/channel");
         const response = await axios.get(
-          "http://site--backend-chatroom--f5vs5q45f4mj.code.run/channel"
+          "https://site--backend-chatroom--f5vs5q45f4mj.code.run/channel"
         );
 
         // console.log(response.data);

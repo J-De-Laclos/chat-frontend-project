@@ -13,7 +13,7 @@ const CreateRoom = ({ token }) => {
     try {
       // await axios.post("http://localhost:3000/channel"
       await axios.post(
-        "http://site--backend-chatroom--f5vs5q45f4mj.code.run/channel",
+        "https://site--backend-chatroom--f5vs5q45f4mj.code.run/channel",
         { name }
       );
       // Rediriger vers la liste des salons après la création réussie
