@@ -10,6 +10,7 @@
 }
 
 .chatroom-head button {
+  font-family: "Roboto", sans-serif;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -20,14 +21,18 @@
 .chat-room-header {
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .chat-messages-container {
   max-height: 400px;
   overflow-y: auto;
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-message {
@@ -41,10 +46,12 @@ textarea {
   resize: none;
   border: none;
   border-radius: 5px;
+  font-family: "Roboto", sans-serif;
 }
 
 .send-message-button {
   display: block;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   padding: 10px;
   background-color: #3498db;
@@ -57,4 +64,30 @@ textarea {
 
 .send-message-button:hover {
   background-color: #2980b9;
+}
+
+.me {
+  text-align: right;
+  color: rgb(27, 86, 112);
+  width: 50%;
+  padding: 7px 7px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #c1d5e9, #98c2e2, #58addb);
+  margin-left: auto;
+}
+
+.me strong {
+  color: #db6634;
+}
+
+.other {
+  color: rgb(27, 62, 112);
+  padding: 7px 7px;
+  width: 50%;
+  border-radius: 5px;
+  background: linear-gradient(to left, #f6f8fa, #d3e0ea, #b8cdd8);
+}
+
+.other strong {
+  color: #9c9701;
 }

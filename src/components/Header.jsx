@@ -16,7 +16,7 @@ const Header = ({ username, token, handleToken }) => {
 
   return (
     <div className="header-container">
-      {username ? <p>Bienvenue, {username} !</p> : <p>Bienvenue !</p>}
+      {username ? <p>Welcome, {username} !</p> : <p>Welcome !</p>}
       <button
         className="dark-mode-button"
         id="darkMode"

@@ -14,7 +14,8 @@ const ChatRoom = ({ username }) => {
       //   console.log("username:", username);
       //   console.log("newMessage:", newMessage);
       const response = await axios.get(
-        `http://localhost:3000/message/${channelId}`
+        // `http://localhost:3000/message/${channelId}`
+        `http://site--backend-chatroom--f5vs5q45f4mj.code.run/message/${channelId}`
       );
       setMessages(response.data);
     } catch (error) {
@@ -28,11 +29,15 @@ const ChatRoom = ({ username }) => {
 
   const handleSendMessage = async () => {
     try {
-      await axios.post("http://localhost:3000/message", {
-        channelId,
-        sender: username,
-        content: newMessage,
-      });
+      // await axios.post("http://localhost:3000/message"
+      await axios.post(
+        "http://site--backend-chatroom--f5vs5q45f4mj.code.run/message",
+        {
+          channelId,
+          sender: username,
+          content: newMessage,
+        }
+      );
 
       // Actualiser la liste des messages après l'envoi du message
       fetchMessages();
@@ -45,7 +50,7 @@ const ChatRoom = ({ username }) => {
   return (
     <div className="chat-room-container">
       <div className="chatroom-head">
-        <h1 className="chat-room-header">Chat Room</h1>
+        <h1 className="chat-room-header">Chat Room </h1>
         <button
           onClick={() => {
             navigate("/chatrooms");
@@ -57,8 +62,16 @@ const ChatRoom = ({ username }) => {
 
       <div className="chat-messages-container">
         {messages.map((message) => (
-          <div key={message._id}>
-            <strong>{message.sender}:</strong> {message.content}
+          <div
+            key={message._id}
+            className={`chat-message ${
+              message.sender === username ? "me" : "other"
+            }`}
+          >
+            <strong>
+              {message.sender === username ? "Moi" : message.sender}:
+            </strong>{" "}
+            {message.content}
           </div>
         ))}
       </div>

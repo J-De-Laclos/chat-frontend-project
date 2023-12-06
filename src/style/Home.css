@@ -8,12 +8,14 @@
 }
 
 .form-home h1 {
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .form-home h2 {
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   margin-bottom: 10px;
   text-align: center;

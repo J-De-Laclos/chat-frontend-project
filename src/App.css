@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 
   background-size: cover;
   background: linear-gradient(to right, #f6f8fa, #d3e0ea, #b8cdd8);
 }
 
 body.dark-mode {
+  font-family: "Roboto", sans-serif;
+
   background: linear-gradient(to right, #2c3e50, #34495e, #2c3e50);
   color: rgb(74, 204, 204);
 }

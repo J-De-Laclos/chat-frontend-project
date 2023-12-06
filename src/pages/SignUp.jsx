@@ -13,11 +13,14 @@ const SignUp = ({ handleToken }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/user/signup", {
-        email,
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "http://site--backend-chatroom--f5vs5q45f4mj.code.run/user/signup",
+        {
+          email,
+          username,
+          password,
+        }
+      );
       //   console.log(response.data);
       handleToken(response.data.token, response.data.account.username);
       navigate("/chatrooms");

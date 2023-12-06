@@ -5,6 +5,7 @@
 
 .chatrooms-section h2 {
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 10px;
 }
 
@@ -12,6 +13,7 @@
   display: block;
   font-size: 25px;
   padding: 10px;
+  font-family: "Roboto", sans-serif;
   margin: 10px 0;
   background-color: #2980b9;
   color: #fff;
@@ -33,6 +35,7 @@
   color: #fff;
   text-align: center;
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
@@ -43,6 +46,7 @@
 
 .chatrooms-section p {
   text-align: center;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
