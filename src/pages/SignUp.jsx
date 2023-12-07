@@ -13,9 +13,10 @@ const SignUp = ({ handleToken }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      // const response = await axios.post("http://localhost:3000/user/signup"
+      // const response = await axios.post(
+      // "http://localhost:3000/signup",
       const response = await axios.post(
-        "https://site--backend-chatroom--f5vs5q45f4mj.code.run/signup",
+        "https://site--backend-chatroom--f5vs5q45f4mj.code.run/user/signup",
         {
           email,
           username,
